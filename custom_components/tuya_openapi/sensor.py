@@ -640,7 +640,6 @@ SENSORS: dict[str, tuple[TuyaSensorEntityDescription, ...]] = {
             for i in (
                 TuyaSensorEntityDescription(
                     key=dp_code,
-                    translation_key="temperature",
                     device_class=SensorDeviceClass.TEMPERATURE,
                     state_class=SensorStateClass.MEASUREMENT,
                     name=f"{dp_code.value}_temperature",
