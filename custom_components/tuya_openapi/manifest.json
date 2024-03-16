@@ -3,8 +3,6 @@
   "name": "Tuya OpenAPI",
   "codeowners": [
     "@Tuya",
-    "@zlinoliver",
-    "@frenck",
     "@EvanSchalton"
   ],
   "config_flow": true,
@@ -55,5 +53,6 @@
   ],
   "requirements": [
     "tuya-iot-py-sdk==0.6.6"
-  ]
+  ],
+  "version": "0.0.0"
 }
