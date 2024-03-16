@@ -28,7 +28,7 @@ from homeassistant.const import (
 )
 from tuya_iot import TuyaCloudOpenAPIEndpoint
 
-DOMAIN = "tuya"
+DOMAIN = "tuya_openapi"
 LOGGER = logging.getLogger(__package__)
 
 CONF_AUTH_TYPE = "auth_type"
