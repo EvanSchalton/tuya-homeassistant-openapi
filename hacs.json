@@ -1,0 +1,5 @@
+{
+    "name": "Tuya OpenAPI",
+    "render_readme": true,
+    "homeassistant": "2024.2.0"
+}
