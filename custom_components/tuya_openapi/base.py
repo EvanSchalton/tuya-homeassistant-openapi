@@ -169,11 +169,11 @@ class InkbirdB64TypeData:
                 if data[0] == "C":
                     temperature_unit = UnitOfTemperature.CELSIUS
                 decoded_bytes = base64.b64decode(data)
-                _temperature, _humidity = struct.Struct("<hH").unpack(
-                    decoded_bytes[1:5]
+                # TODO: Identify what the skipped bytes are in the base station data
+                _temperature, _humidity, _, battery = struct.Struct("<hHIb").unpack(
+                    decoded_bytes[1:11]
                 )
                 (temperature, humidity) = _temperature / 10.0, _humidity / 10.0
-                battery = int.from_bytes(decoded_bytes[9:10], "little")
             except Exception as e:
                 LOGGER.error("InkbirdB64TypeData.from_raw: %s", e)
                 raise ValueError(f"Invalid data: {data}") from e
