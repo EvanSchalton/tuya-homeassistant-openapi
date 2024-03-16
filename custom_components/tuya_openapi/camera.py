@@ -1,4 +1,5 @@
 """Support for Tuya cameras."""
+
 from __future__ import annotations
 
 from homeassistant.components import ffmpeg

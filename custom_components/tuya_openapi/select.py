@@ -1,4 +1,5 @@
 """Support for Tuya select."""
+
 from __future__ import annotations
 
 from homeassistant.components.select import SelectEntity, SelectEntityDescription

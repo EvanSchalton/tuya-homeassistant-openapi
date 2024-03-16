@@ -1,4 +1,5 @@
 """Support for Tuya number."""
+
 from __future__ import annotations
 
 from homeassistant.components.number import (
