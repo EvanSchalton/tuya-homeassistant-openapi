@@ -1,12 +1,10 @@
 """Constants for the Tuya integration."""
 from __future__ import annotations
 
+import logging
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from enum import StrEnum
-import logging
-
-from tuya_iot import TuyaCloudOpenAPIEndpoint
 
 from homeassistant.components.sensor import SensorDeviceClass
 from homeassistant.const import (
@@ -27,6 +25,7 @@ from homeassistant.const import (
     UnitOfTemperature,
     UnitOfVolume,
 )
+from tuya_iot import TuyaCloudOpenAPIEndpoint
 
 DOMAIN = "tuya"
 LOGGER = logging.getLogger(__package__)

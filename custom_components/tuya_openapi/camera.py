@@ -1,14 +1,14 @@
 """Support for Tuya cameras."""
 from __future__ import annotations
 
-from tuya_iot import TuyaDevice, TuyaDeviceManager
-
 from homeassistant.components import ffmpeg
-from homeassistant.components.camera import Camera as CameraEntity, CameraEntityFeature
+from homeassistant.components.camera import Camera as CameraEntity
+from homeassistant.components.camera import CameraEntityFeature
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.dispatcher import async_dispatcher_connect
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from tuya_iot import TuyaDevice, TuyaDeviceManager
 
 from . import HomeAssistantTuyaData
 from .base import TuyaEntity

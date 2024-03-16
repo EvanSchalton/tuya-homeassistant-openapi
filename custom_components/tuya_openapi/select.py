@@ -1,14 +1,13 @@
 """Support for Tuya select."""
 from __future__ import annotations
 
-from tuya_iot import TuyaDevice, TuyaDeviceManager
-
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.dispatcher import async_dispatcher_connect
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
+from tuya_iot import TuyaDevice, TuyaDeviceManager
 
 from . import HomeAssistantTuyaData
 from .base import TuyaEntity

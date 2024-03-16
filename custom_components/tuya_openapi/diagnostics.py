@@ -1,18 +1,18 @@
 """Diagnostics support for Tuya."""
 from __future__ import annotations
 
-from contextlib import suppress
 import json
+from contextlib import suppress
 from typing import Any, cast
-
-from tuya_iot import TuyaDevice
 
 from homeassistant.components.diagnostics import REDACTED
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, callback
-from homeassistant.helpers import device_registry as dr, entity_registry as er
+from homeassistant.helpers import device_registry as dr
+from homeassistant.helpers import entity_registry as er
 from homeassistant.helpers.device_registry import DeviceEntry
 from homeassistant.util import dt as dt_util
+from tuya_iot import TuyaDevice
 
 from . import HomeAssistantTuyaData
 from .const import (

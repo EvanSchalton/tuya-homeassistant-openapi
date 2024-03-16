@@ -4,6 +4,14 @@ from __future__ import annotations
 from typing import NamedTuple
 
 import requests
+from homeassistant.components.light import DOMAIN as LIGHT_DOMAIN
+from homeassistant.components.switch import DOMAIN as SWITCH_DOMAIN
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.core import HomeAssistant, callback
+from homeassistant.exceptions import ConfigEntryNotReady
+from homeassistant.helpers import device_registry as dr
+from homeassistant.helpers import entity_registry as er
+from homeassistant.helpers.dispatcher import dispatcher_send
 from tuya_iot import (
     AuthType,
     TuyaDevice,
@@ -13,14 +21,6 @@ from tuya_iot import (
     TuyaOpenAPI,
     TuyaOpenMQ,
 )
-
-from homeassistant.components.light import DOMAIN as LIGHT_DOMAIN
-from homeassistant.components.switch import DOMAIN as SWITCH_DOMAIN
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.core import HomeAssistant, callback
-from homeassistant.exceptions import ConfigEntryNotReady
-from homeassistant.helpers import device_registry as dr, entity_registry as er
-from homeassistant.helpers.dispatcher import dispatcher_send
 
 from .const import (
     CONF_ACCESS_ID,

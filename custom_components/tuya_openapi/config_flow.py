@@ -3,10 +3,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from tuya_iot import AuthType, TuyaOpenAPI
 import voluptuous as vol
-
 from homeassistant import config_entries
+from tuya_iot import AuthType, TuyaOpenAPI
 
 from .const import (
     CONF_ACCESS_ID,
