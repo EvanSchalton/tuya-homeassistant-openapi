@@ -49,6 +49,7 @@
   "documentation": "https://www.home-assistant.io/integrations/tuya",
   "integration_type": "hub",
   "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/EvanSchalton/tuya-homeassistant-openapi/issues",
   "loggers": [
     "tuya_iot_openapi"
   ],
