@@ -1,5 +1,7 @@
 > AS OF RIGHT NOW THIS IS ONLY USEFUL FOR `IBS-M2` POOL SENSOR. It's a hacky approach to limitations with the tuya apigw repo.
 
+> `If this has been working for you and randomly stops`, please fillow this [guide](https://github.com/azerty9971/xtend_tuya/blob/a65fc4b5de0140012f23976d1b91c43197667d50/docs/renew_cloud_credentials.md) to extend your connection.
+
 # Background
 
 This is all just a workaround to a breaking API change: https://github.com/tuya/tuya-device-sharing-sdk/issues/11
