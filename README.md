@@ -3,59 +3,12 @@
 ACTIVELY WORKING TO MOVE THIS OVER TO A MORE FEATURE RICH IMPLEMENTATION
 https://github.com/azerty9971/xtend_tuya/issues/346#issuecomment-2967370954
 
+If you want to leverage this while it's still under review you can add my github fork to HA under HACS (https://github.com/EvanSchalton/xtend_tuya.git) then install the tuya_xtend integration.
+Oncce this is merged into Azerty's repo you should be able to install that over the fork w/out issue (or reconfiguration).
+
 -----
 
 
-> AS OF RIGHT NOW THIS IS ONLY USEFUL FOR `IBS-M2` POOL SENSOR. It's a hacky approach to limitations with the tuya apigw repo.
-
-> `If this has been working for you and randomly stops`, please fillow this [guide](https://github.com/azerty9971/xtend_tuya/blob/a65fc4b5de0140012f23976d1b91c43197667d50/docs/renew_cloud_credentials.md) to extend your connection.
-
-# Background
-
-This is all just a workaround to a breaking API change: https://github.com/tuya/tuya-device-sharing-sdk/issues/11
-
-I'd ideally like to merge this PR: https://github.com/home-assistant/core/pull/113214
-into the base Tuya integration, but the API change means the non-standard data points aren't available in home assistant.
-
-I forked an old version of the HA repo, using the legacy Tuya SDK.
-
-# Setup:
-
-## Setup in Tuya Platform
-
-1. This integration reverts the Tuya core integration to use the [tuya-iot-python-sdk](https://github.com/tuya/tuya-iot-python-sdk) which returns the `DP Instruction` set instead of just the `Standard Instruction` so follow it's standard [setup](https://github.com/tuya/tuya-iot-python-sdk)
-
->I've logged [an issue](https://github.com/tuya/tuya-device-sharing-sdk/issues/11) with the Tuya team, if they merge that I'll be able to merge my [PR](https://github.com/tuya/tuya-device-sharing-sdk/issues/11) into core
-
-2. Toggle the `DP Instruction`
-
-In the cloud portal, the edit pencil on the device card links to the `Change Control Instruction Mode`
-
-![Change Control Instruction](screenshots/device-card.png)
-
-Select `DP Instruction`, you should see the additional value populate.
-
-![DP Instruction](screenshots/instruction-mode.png)
-
-## Add to HACS
-
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
-
-Installation is easiest via the [Home Assistant Community Store
-(HACS)](https://hacs.xyz/), which is the best place to get third-party
-integrations for Home Assistant. Once you have HACS set up, simply click the button below (requires My Homeassistant configured) or
-follow the [instructions for adding a custom
-repository](https://hacs.xyz/docs/faq/custom_repositories) and then
-the integration will be available to install like any other.
-
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=EvanSchalton&repository=tuya-homeassistant-openapi&category=integration)
-
-## Add Integration
-
-After installing, you can easily configure your devices using the Integrations configuration UI.  Go to Settings / Devices & Services and press the Add Integration button, or click the shortcut button below (requires My Homeassistant configured).
-
-[![Add Integration to your Home Assistant
-instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=tuya_openapi)
 
 # Hardware
 - Sensor: [IBS-M2](https://amzn.to/3wX0Ir3)
