@@ -1,3 +1,11 @@
+-----
+
+ACTIVELY WORKING TO MOVE THIS OVER TO A MORE FEATURE RICH IMPLEMENTATION
+https://github.com/azerty9971/xtend_tuya/issues/346#issuecomment-2967370954
+
+-----
+
+
 > AS OF RIGHT NOW THIS IS ONLY USEFUL FOR `IBS-M2` POOL SENSOR. It's a hacky approach to limitations with the tuya apigw repo.
 
 > `If this has been working for you and randomly stops`, please fillow this [guide](https://github.com/azerty9971/xtend_tuya/blob/a65fc4b5de0140012f23976d1b91c43197667d50/docs/renew_cloud_credentials.md) to extend your connection.
