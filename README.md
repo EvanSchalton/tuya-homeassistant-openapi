@@ -1,10 +1,12 @@
 -----
 
 ACTIVELY WORKING TO MOVE THIS OVER TO A MORE FEATURE RICH IMPLEMENTATION
+
 https://github.com/azerty9971/xtend_tuya/issues/346#issuecomment-2967370954
 
 If you want to leverage this while it's still under review you can add my github fork to HA under HACS (https://github.com/EvanSchalton/xtend_tuya.git) then install the tuya_xtend integration.
-Oncce this is merged into Azerty's repo you should be able to install that over the fork w/out issue (or reconfiguration).
+
+Once this is merged into Azerty's repo you should be able to install that over the fork w/out issue (or reconfiguration).
 
 -----
 
